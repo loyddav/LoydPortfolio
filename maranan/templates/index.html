@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  overflow-x: hidden;
+}
+ 
+h1, h2 {
+  color: #333;
+  font-family: 'Merriweather', serif;
+}
+ 
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+}
+ 
+header {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+ 
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+ 
+nav .logo a {
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+ 
+nav ul {
+  list-style: none;
+  display: flex;
+}
+ 
+nav ul li {
+  margin-left: 20px;
+}
+ 
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+ 
+nav ul li a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+ 
+/* Hero Section */
+.hero {
+  background: url('your-background-image.jpg') no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+  text-align: let;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.hero-content {
+  max-width: 600px;
+  margin-right: 40%;
+}
+ 
+ 
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+ 
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: left;
+}
+ 
+.hero .btn-primary {
+  background-color: #ff6f61;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+ 
+.hero .btn-primary:hover {
+  background-color: #e55e4d;
+}
+ 
+/* About Section */
+
+.about {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: #e55e4d;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+ 
+.about img {
+  width: 150px;
+  height: 150px;
+  border: orangered 6px solid;
+  border-radius: 50%;
+}
+ 
+.about p {
+  max-width: 600px;
+  text-align: left;
+  font-size: 1.1rem;
+}
+ 
+/* Work Section */
+.work {
+  background-color: #fff;
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.work h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.work-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.work-item {
+  background: linear-gradient(135deg, #ff6f61, #e55e4d);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background: #333;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+ 
+.overlay p {
+  font-size: 1.5rem;
+}
+ 
+.overlay .btn-secondary {
+  background-color: #ff6f61;
+  padding: 10px 20px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+ 
+.overlay .btn-secondary:hover {
+  background-color: #e55e4d;
+}
+ 
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+ 
+footer a {
+  color: #ff6f61;
+  text-decoration: none;
+}
+ 
+.image {
+  width: 400px;
+  height: 450px;
+  border: orangered 6px solid;
+  border-radius: 50%;
+  margin-left: 150%;
+}
+
+.skills {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+ 
+</style>
+<body>
+  <header>
+    <nav>
+      <div class="logo"><a href="#">My Portfolio</a></div>
+      <ul>
+        <li><a href="#about">Home</a></li>
+        <li><a href="#contact">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hello Everyone! I'm Loyd Maranan, Welcome to my Portfolio</h1>
+      <p>This is my Pre-Finals project portfolio in Data Structures and Algorithm. Creating a responsive web for designing and developing using Django Framework</p>
+      <a href="#work" class="btn-primary">View My Project</a>
+      <img src="https://scontent.fmnl37-1.fna.fbcdn.net/v/t39.30808-6/448483742_1160231868526324_8726464414225793283_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeEQifz6pQkVAKW8G9aBmdIUqqwgPlsnaACqrCA-WydoAGxRY0LhdKpMSSb8VSgmW_MrnrAk_ZMkI49fstz9hu2V&_nc_ohc=uAJBRFolkq0Q7kNvgG6_ssB&_nc_zt=23&_nc_ht=scontent.fmnl37-1.fna&_nc_gid=AJeeSS6PH8YVkNs964-7hA0&oh=00_AYCu79DY-fgZGE9lDyp7uRNbfmMvcYjD8lMOUR5iyckWLw&oe=6759A031" alt="Loyd" class="image">
+    </div>
+  </section>
+ 
+  <section id="about" class="about">
+    <h2>Profile</h2>
+    <div class="about-content">
+      <img src="https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-1/465597152_1249938746222302_8916013992406836234_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeE3fWgcuLva91-FhrA23NgZaF1EgZZDGSVoXUSBlkMZJcGsxEackWH3cuFUvbV2UM9dB4ExD1q69ai8osz_SSYN&_nc_ohc=6CpmgjLHcpQQ7kNvgH4PelL&_nc_zt=24&_nc_ht=scontent.fmnl3-4.fna&_nc_gid=Am3ZunhfMx5NnSuLQ9xWAOO&oh=00_AYDr0-Vd8SRrYeG_CZHjZaNe6dvu_7r3sh2OHUKLTW0nsg&oe=6759B4E6" alt="photo">
+      <p>Passionate about technology and committed to lifelong learning. Actively seeking opportunities to contribute to projects. Currently a 2nd-year BS Information Technology student at STI College, Sta. Maria.</p>
+    </div>
+
+  </section>
+  <section id="skills" class="skills">
+    <h2>Skills and Subjects</h2>
+    <div class="skills-list">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">Java</div>
+      <div class="skill">Django</div>
+      <div class="skill">Python</div>
+      <div class="skill">Data Structures and Algorithm</div>
+    </div>
+  </section>
+ 
+  <section id="work" class="work">
+    <h2>My Task Performance</h2>
+    <div class="work-gallery">
+      <div class="work-item">
+        <p><strong>Project 1:</strong></p>
+        <p>Project about making a responsive web personal portfolio using CSS, HTML, and Django</p>
+      </div>
+      <div class="work-item">
+        <p><strong>Project 2:</strong></p>
+        <p>Project about creating superuser (Database) in Django, for backend options</p>
+      </div>
+      <div class="work-item">
+        <p><strong>Project 3:</strong></p>
+        <p>Project about making a Point o Sale System using Django</p>
+      </div>
+    </div>
+  </section>
+  <footer id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: LoydMaranan@gmail.com</p>
+  </footer>
+</body>
+</html>
+ 
